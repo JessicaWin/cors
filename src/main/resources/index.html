@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div>
+	<h1>Simple Request</h1>
+	<div>
+		<span>Test no ACCESS_CONTROL_ALLOW_ORIGIN header set by server</span>
+		<button type="button" onClick="testRequest('NO_ORIGIN')">test</button>
+	</div>
+	<div>
+		<span>Test origin not allowed by ACCESS_CONTROL_ALLOW_ORIGIN header set by server</span>
+		<button type="button" onClick="testRequest('DIFFERENT_ORIGIN')">test</button>
+	</div>
+	<div>
+		<span>Test withCredentials is not set by server</span>
+		<button type="button" onClick="testRequest('NO_CREDENTIAL')">test</button>
+	</div>
+	<div>
+		<span>Test withCredentials is set to false by server</span>
+		<button type="button" onClick="testRequest('FALSE_CREDENTIAL')">test</button>
+	</div>
+	<div>
+		<span>Test get not allowed response header</span>
+		<button type="button" onClick="testRequest('NOT_ALLOWED_HEADER')">test</button>
+	</div>
+	<div>
+		<span>Test request success</span>
+		<button type="button" onClick="testRequest('SUCCESS')">test</button>
+	</div>
+	<h1>Complex Request</h1>
+	<div>
+		<span>Test no ACCESS_CONTROL_ALLOW_ORIGIN header set by server</span>
+		<button type="button" onClick="testRequest('NO_ORIGIN', true)">test</button>
+	</div>
+	<div>
+		<span>Test origin not allowed by ACCESS_CONTROL_ALLOW_ORIGIN header set by server</span>
+		<button type="button" onClick="testRequest('DIFFERENT_ORIGIN', true)">test</button>
+	</div>
+	<div>
+		<span>Test withCredentials is not set by server</span>
+		<button type="button" onClick="testRequest('NO_CREDENTIAL', true)">test</button>
+	</div>
+	<div>
+		<span>Test withCredentials is set to false by server</span>
+		<button type="button" onClick="testRequest('FALSE_CREDENTIAL', true)">test</button>
+	</div>
+	<div>
+		<span>Test get not allowed response header</span>
+		<button type="button" onClick="testRequest('NOT_ALLOWED_HEADER', true)">test</button>
+	</div>
+	<div>
+		<span>Test request success</span>
+		<button type="button" onClick="testRequest('SUCCESS', true)">test</button>
+	</div>
+	<div>
+		<span>Test request success</span>
+		<button type="button" onClick="testRequest('SUCCESS', true, 2)">test</button>
+	</div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
